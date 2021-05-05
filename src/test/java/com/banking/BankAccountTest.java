@@ -28,7 +28,7 @@ class BankAccountTest {
     }
 
     @Test
-    void shouldGetBalance_givenDeposit() {
+    void shouldGetBalance_givenDeposit() throws InvalidAmountException {
 
         // when
         account.deposit(20);

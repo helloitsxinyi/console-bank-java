@@ -21,8 +21,12 @@ public class BankAccount {
         return customerName;
     }
 
-    public void deposit(int depositAmount) {
-        balance += depositAmount;
+    public void deposit(int depositAmount) throws InvalidAmountException {
+        if (depositAmount > 0) {
+            balance += depositAmount;
+        } else {
+            throw new InvalidAmountException();
+        }
     }
 
     public int getBalance() {
