@@ -17,7 +17,7 @@ class BankAccountTest {
     }
 
     @Test
-    void shouldGetCustomerNameAndId_whenNewAccount() {
+    void shouldGetCustomerNameAndId_whenGetAccountInfo() {
 
         // when
         account = new BankAccount("Mary", "abc123");
