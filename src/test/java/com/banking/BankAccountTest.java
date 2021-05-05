@@ -53,7 +53,6 @@ class BankAccountTest {
 
         // then
         assertThat(account.getBalance()).isEqualTo(10);
-
     }
 
     @Test
@@ -64,6 +63,18 @@ class BankAccountTest {
 
         // then
         assertThrows(InvalidAmountException.class, () -> account.withdraw(30));
+    }
+
+    @Test
+    void shouldGetCorrectStatement_givenPreviousTransaction() throws InvalidAmountException {
+
+        // when
+        account.deposit(30);
+        account.withdraw(20);
+
+
+        // then
+        assertThat(account.getPreviousTransaction()).isEqualTo(20);
     }
 }
 

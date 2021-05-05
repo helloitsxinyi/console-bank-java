@@ -5,6 +5,7 @@ public class BankAccount {
     private String customerId;
     private String customerName;
     private int balance;
+    private int previousTransaction;
 
 
     public BankAccount() {
@@ -39,5 +40,7 @@ public class BankAccount {
         return balance;
     }
 
-
+    public int getPreviousTransaction() {
+        return previousTransaction;
+    }
 }
