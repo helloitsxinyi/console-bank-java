@@ -9,7 +9,7 @@ public class AccountMenu {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        account = new BankAccount();
+        account = new BankAccount("John Tan", "abc123");
         try {
             showMenuIntroAndOptions(account);
         } catch (InvalidAmountException e) {
@@ -38,23 +38,12 @@ public class AccountMenu {
             option = scanner.next().charAt(0);
 
             switch (option) {
-                case 'A':
-                    System.out.println(account.getBalance());
-                    break;
-                case 'B':
-                    selectedDeposit();
-                    break;
-                case 'C':
-                    selectedWithdrawal();
-                    break;
-                case 'D':
-                    System.out.println(account.getPreviousTransaction());
-                    break;
-                case 'E':
-                    System.out.println("Goodbye!");
-                    break;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + option);
+                case 'A' -> System.out.println(account.getBalance());
+                case 'B' -> selectedDeposit();
+                case 'C' -> selectedWithdrawal();
+                case 'D' -> System.out.println(account.getPreviousTransaction());
+                case 'E' -> System.out.println("Goodbye!");
+                default -> throw new IllegalStateException("Unexpected value: " + option);
             }
         } while (option != 'E');
     }
