@@ -6,11 +6,20 @@ import static org.assertj.core.api.Assertions.*;
 
 class BankAccountTest {
 
-    BankAccount account = new BankAccount();
-
     @Test
-    void shouldGetZero_givenNewAccount() {
-        assertThat(account).isEqualTo(0);
+    void shouldGetCustomerNameAndId_whenNewAccount() {
+
+        // given
+        BankAccount account = new BankAccount();
+
+        // when
+        String custName = account.getCustomerName();
+
+        // then
+        assertThat(custName).isEqualTo("");
     }
+
+
+
 }
 
