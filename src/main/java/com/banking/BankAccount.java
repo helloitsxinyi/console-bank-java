@@ -29,7 +29,7 @@ public class BankAccount {
     }
 
     public void withdraw(int withdrawAmount) throws InvalidAmountException {
-        if (withdrawAmount <= 0) {
+        if (withdrawAmount > balance || withdrawAmount <= 0) {
             throw new InvalidAmountException();
         }
         balance -= withdrawAmount;
