@@ -22,7 +22,7 @@ public class BankAccount {
     }
 
     public void deposit(int depositAmount) {
-        balance = 0;
+        balance += depositAmount;
     }
 
     public int getBalance() {
