@@ -74,7 +74,7 @@ class BankAccountTest {
 
 
         // then
-        assertThat(account.getPreviousTransaction()).isEqualTo(20);
+        assertThat(account.getPreviousTransaction()).isEqualTo(-20);
     }
 }
 

@@ -27,6 +27,7 @@ public class BankAccount {
             throw new InvalidAmountException();
         }
         balance += depositAmount;
+        previousTransaction = depositAmount;
     }
 
     public void withdraw(int withdrawAmount) throws InvalidAmountException {
@@ -34,6 +35,7 @@ public class BankAccount {
             throw new InvalidAmountException();
         }
         balance -= withdrawAmount;
+        previousTransaction = -withdrawAmount;
     }
 
     public int getBalance() {
