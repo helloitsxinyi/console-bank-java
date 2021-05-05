@@ -35,7 +35,7 @@ class BankAccountTest {
         account.deposit(20);
 
         // then
-        assertThat(account.getBalance()).isEqualTo(20);
+        assertThat(account.getBalance()).isEqualTo("Balance: " + 20);
     }
 
     @Test
@@ -52,7 +52,7 @@ class BankAccountTest {
         account.withdraw(10);
 
         // then
-        assertThat(account.getBalance()).isEqualTo(10);
+        assertThat(account.getBalance()).isEqualTo("Balance: " + 10);
     }
 
     @Test
@@ -74,7 +74,7 @@ class BankAccountTest {
 
 
         // then
-        assertThat(account.getPreviousTransaction()).isEqualTo(-20);
+        assertThat(account.getPreviousTransaction()).isEqualTo("Previous transaction: withdrawal of " + 20);
     }
 }
 

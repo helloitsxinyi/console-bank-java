@@ -1,5 +1,7 @@
 package com.banking;
 
+import static java.lang.Math.abs;
+
 public class BankAccount {
 
     private String customerId;
@@ -11,7 +13,6 @@ public class BankAccount {
     public BankAccount() {
         customerName = "Xiao Ming";
         customerId = "123";
-
     }
 
     public String getCustomerId() {
@@ -38,11 +39,14 @@ public class BankAccount {
         previousTransaction = -withdrawAmount;
     }
 
-    public int getBalance() {
-        return balance;
+    public String getBalance() {
+        return "Balance: " + balance;
     }
 
-    public int getPreviousTransaction() {
-        return previousTransaction;
+    public String getPreviousTransaction() {
+        if (previousTransaction > 0) {
+            return "Previous transaction: deposit of " + previousTransaction;
+        }
+        return "Previous transaction: withdrawal of " + abs(previousTransaction);
     }
 }
