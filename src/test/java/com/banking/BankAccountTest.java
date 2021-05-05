@@ -20,12 +20,11 @@ class BankAccountTest {
     void shouldGetCustomerNameAndId_whenNewAccount() {
 
         // when
-        String custName = account.getCustomerName();
-        String custId = account.getCustomerId();
+        account = new BankAccount("Mary", "abc123");
 
         // then
-        assertThat(custName).isEqualTo("Xiao Ming");
-        assertThat(custId).isEqualTo("123");
+        assertThat(account.getCustomerName()).isEqualTo("Mary");
+        assertThat(account.getCustomerId()).isEqualTo("abc123");
     }
 
     @Test

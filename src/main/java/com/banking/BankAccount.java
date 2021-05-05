@@ -11,8 +11,13 @@ public class BankAccount {
 
 
     public BankAccount() {
-        customerName = "Xiao Ming";
-        customerId = "123";
+        customerName = "";
+        customerId = "";
+    }
+
+    public BankAccount(String custName, String custId) {
+        customerName = custName;
+        customerId = custId;
     }
 
     public String getCustomerId() {
@@ -49,4 +54,5 @@ public class BankAccount {
         }
         return "Previous transaction: withdrawal of " + abs(previousTransaction);
     }
+
 }
