@@ -27,7 +27,14 @@ class BankAccountTest {
         assertThat(custId).isEqualTo("123");
     }
 
+    @Test
+    void shouldGetBalance_givenDeposit() {
 
+        // when
+        account.deposit(20);
 
+        // then
+        assertThat(account.getBalance()).isEqualTo(20);
+    }
 }
 

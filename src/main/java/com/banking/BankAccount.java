@@ -4,6 +4,7 @@ public class BankAccount {
 
     private String customerId;
     private String customerName;
+    private int balance;
 
 
     public BankAccount() {
@@ -19,4 +20,13 @@ public class BankAccount {
     public String getCustomerName() {
         return customerName;
     }
+
+    public void deposit(int depositAmount) {
+        balance = 0;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
 }
