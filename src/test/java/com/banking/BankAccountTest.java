@@ -32,17 +32,38 @@ class BankAccountTest {
     void shouldGetBalance_givenDeposit() throws InvalidAmountException {
 
         // when
-        account.deposit(0);
+        account.deposit(20);
 
         // then
         assertThat(account.getBalance()).isEqualTo(20);
     }
 
     @Test
-    void shouldReturnInvalid_givenInvalidDepositAmount() throws InvalidAmountException {
+    void shouldGetInvalid_givenInvalidDepositAmount() throws InvalidAmountException {
 
         assertThrows(InvalidAmountException.class, ()-> account.deposit(0));
     }
 
+    @Test
+    void shouldGetCorrectBalance_givenWithdraw() throws InvalidAmountException {
+
+        // when
+        account.deposit(20);
+        account.withdraw(10);
+
+        // then
+        assertThat(account.getBalance()).isEqualTo(10);
+
+    }
+
+    @Test
+    void shouldGetInvalid_givenWithdrawMoreThanBalanceAmount() throws InvalidAmountException {
+
+        // when
+        account.deposit(20);
+
+        // then
+        assertThrows(InvalidAmountException.class, () -> account.withdraw(30));
+    }
 }
 

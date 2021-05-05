@@ -22,11 +22,17 @@ public class BankAccount {
     }
 
     public void deposit(int depositAmount) throws InvalidAmountException {
-        if (depositAmount > 0) {
-            balance += depositAmount;
-        } else {
+        if (depositAmount <= 0) {
             throw new InvalidAmountException();
         }
+        balance += depositAmount;
+    }
+
+    public void withdraw(int withdrawAmount) throws InvalidAmountException {
+        if (withdrawAmount <= 0) {
+            throw new InvalidAmountException();
+        }
+        balance -= withdrawAmount;
     }
 
     public int getBalance() {
