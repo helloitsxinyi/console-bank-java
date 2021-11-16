@@ -36,7 +36,7 @@ public class AccountMenu {
             } while (option != 'E');
 
         } catch (IllegalStateException e) {
-            System.out.println("Invalid option!");
+            System.out.println("Invalid menu option!");
             showMenuIntroAndOptions(account);
         }
     }
@@ -52,7 +52,7 @@ public class AccountMenu {
                     default -> throw new IllegalStateException("Unexpected value: " + option);
                 }
         } catch (InvalidAmountException e) {
-            System.out.println("Invalid input! Please try again.");
+            System.out.println("Invalid amount! Please try again.");
             enterOption(option);
         }
     }
