@@ -11,19 +11,23 @@ Simple Java banking console application developed through Test-Driven Developmen
 
 ## Features
 ### Main menu selection
-![menu](menu.png)
+![menu](./images/menu.png)
 
-### Deposit, withdraw
-![deposit](deposit.png)
-![withdraw](withdraw.png)
-![balance](balance.png)
-![recenttransaction](recenttransaction.png)
+### Deposit
+![deposit](./images/deposit.png)
+
+### Withdraw
+![withdraw](./images/withdrawal.png)
+
+### Display balance
+![balance](./images/balance.png)
+
 
 ## Check your balance and most recent transactions
 
 
 ### Automatic re-prompt of option selection
-![reprompt](reprompt.png)
+![reprompt](./images/reprompt.png)
 
 ### Invalid amount, invalid menu input checking
 
