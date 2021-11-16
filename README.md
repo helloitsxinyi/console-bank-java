@@ -13,11 +13,20 @@ Simple Java banking console application developed through Test-Driven Developmen
 ### Main menu selection
 ![menu](menu.png)
 
-### Deposit and Withdraw functionality
-![img.png](deposit.png)
+### Deposit, withdraw
+![deposit](deposit.png)
+
+## Check your balance and most recent transactions
+
+
 ### Automatic re-prompt of option selection
 
-### Terminate as desired
+
+### Invalid amount, invalid menu input checking
+
+
+### Terminate at menu
+
 
 ## User stories
 * Menu - As a customer, I want to view a menu so that I know what options I have in the app.
@@ -30,3 +39,4 @@ Simple Java banking console application developed through Test-Driven Developmen
 
 ## Extensions
 - Recognizing invalid string input during deposit and withdrawal
+- Ability to terminate application during deposit/withdraw/check functions
