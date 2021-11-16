@@ -15,12 +15,15 @@ Simple Java banking console application developed through Test-Driven Developmen
 
 ### Deposit, withdraw
 ![deposit](deposit.png)
+![withdraw](withdraw.png)
+![balance](balance.png)
+![recenttransaction](recenttransaction.png)
 
 ## Check your balance and most recent transactions
 
 
 ### Automatic re-prompt of option selection
-
+![reprompt](reprompt.png)
 
 ### Invalid amount, invalid menu input checking
 
