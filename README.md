@@ -1,11 +1,25 @@
 # simple-java-banking-app
-Simple Java banking console application developed through Test-Driven Development (TDD)
+Simple Java banking console application developed through Test-Driven Development (TDD).
 
-# Prerequisites:
+## Prerequisites
 - JDK 14.0 and above
 - Maven
 
-# User stories:
+## Setup
+- Clone the repo and run the main function in AccountMenu to begin!
+- A default bank account is initialized upon execution, but you can change the input parameters as you like.
+
+## Features
+### Main menu selection
+![menu](menu.png)
+
+### Deposit and Withdraw functionality
+![img.png](deposit.png)
+### Automatic re-prompt of option selection
+
+### Terminate as desired
+
+## User stories
 * Menu - As a customer, I want to view a menu so that I know what options I have in the app.
 * Get account info - As a customer, I want to be able to obtain my account information so that I am aware of my account information. <br>
 * Deposit - As a customer, I want to be able to deposit money in my account so that I can save money. <br>
@@ -13,3 +27,6 @@ Simple Java banking console application developed through Test-Driven Developmen
 * Most recent transaction - As a customer, I want to be able to obtain information about my most recent transaction so that I can keep track of my deposits/withdrawals.
 * Exit - As a customer, I want to be able to exit so that I can stop the application as and when I would like.
 * Re-prompt - As a customer, I want to be able to re-enter my choice so that I can continue using the app if I entered an invalid option.
+
+## Extensions
+- Recognizing invalid string input during deposit and withdrawal
