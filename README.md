@@ -73,4 +73,4 @@ Invalid menu option entered: <br>
 
 ## Extensions
 - Recognizing invalid string input during deposit and withdrawal
-- Ability to terminate application during deposit/withdraw/check functions
+- Ability to terminate application during deposit/withdraw functions
