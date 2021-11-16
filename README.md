@@ -10,7 +10,7 @@ Simple Java banking console application developed through Test-Driven Developmen
 - A default bank account is initialized upon execution, but you can change the input parameters as you like.
 
 ## Features
-<div style="width:200px">
+<div style="width:100px">
 
 ### Main menu selection
 ![menu](./images/menu.png)
