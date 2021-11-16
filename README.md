@@ -1,5 +1,5 @@
 # simple-java-banking-app
-Simple Java banking console application developed through Test-Driven Development (TDD).
+Simple Java banking console application developed through Test-Driven Development (TDD). Started as an exploration into TDD, with the aim of practicing and experience development through TDD.
 
 ## Prerequisites
 - JDK 14.0 and above
