@@ -10,7 +10,6 @@ Simple Java banking console application developed through Test-Driven Developmen
 - A default bank account is initialized upon execution, but you can change the input parameters as you like.
 
 ## Features
-<div style="width:100px">
 
 ### Main menu selection
 ![menu](./images/menu.png)
@@ -24,12 +23,7 @@ Simple Java banking console application developed through Test-Driven Developmen
 ### Display balance
 ![balance](./images/balance.png)
 
-<div style="width:500px">
-
 ### Display most recent transaction
-
-</div>
-
 Deposit: <br>
 ![recenttransdep](./images/previoustransdep.png)
 
@@ -37,19 +31,10 @@ Deposit: <br>
 Withdrawal: <br>
 ![recenttranswithdraw](./images/previoustranswithdraw.png)
 
-<div style="width:500px">
-
 ### Automatic re-prompt of option selection
-</div>
-
 ![reprompt](./images/reprompt.png)
 
-<div style="width:500px">
-
 ### Invalid amount, invalid menu input checking
-
-</div>
-
 Invalid amount entered: <br>
 ![invalidamount](./images/invalidamount.png)
 
@@ -58,8 +43,6 @@ Invalid menu option entered: <br>
 
 ### Terminate at menu
 ![exit](./images/exit.png)
-</div>
-
 
 
 ## User stories
