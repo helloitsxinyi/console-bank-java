@@ -22,17 +22,25 @@ Simple Java banking console application developed through Test-Driven Developmen
 ### Display balance
 ![balance](./images/balance.png)
 
+### Display most recent transaction
+Deposit:
+![recenttransdep](./images/previoustransdep.png)
 
-## Check your balance and most recent transactions
-
+Withdrawal:
+![recenttranswithdraw](./images/previoustranswithdraw.png)
 
 ### Automatic re-prompt of option selection
 ![reprompt](./images/reprompt.png)
 
 ### Invalid amount, invalid menu input checking
+Invalid amount entered:
+![invalidamount](./images/invalidamount.png)
 
+Invalid menu option entered:
+![invalidmenu](./images/invalidmenu.png)
 
 ### Terminate at menu
+![exit](./images/exit.png)
 
 
 ## User stories
