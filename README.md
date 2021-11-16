@@ -1,6 +1,10 @@
 # simple-java-banking-app
 Simple Java banking console application developed through Test-Driven Development (TDD)
 
+# Prerequisites:
+- JDK 14.0 and above
+- Maven
+
 # User stories:
 * Menu - As a customer, I want to view a menu so that I know what options I have in the app.
 * Get account info - As a customer, I want to be able to obtain my account information so that I am aware of my account information. <br>
