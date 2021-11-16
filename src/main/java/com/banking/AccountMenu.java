@@ -3,6 +3,8 @@ package com.banking;
 import java.nio.channels.ScatteringByteChannel;
 import java.util.Scanner;
 
+import static java.lang.Character.toUpperCase;
+
 public class AccountMenu {
 
     private static BankAccount account;
@@ -10,42 +12,49 @@ public class AccountMenu {
 
     public static void main(String[] args) {
         account = new BankAccount("John Tan", "abc123");
+        showMenuIntroAndOptions(account);
+
+    }
+
+    private static void showMenuIntroAndOptions(BankAccount account) {
         try {
+            System.out.println("Welcome " + account.getCustomerName());
+            System.out.println("ID: " + account.getCustomerId());
+            System.out.println("You have the following options: ");
+            System.out.println("A: Get balance");
+            System.out.println("B: Deposit");
+            System.out.println("C: Withdraw");
+            System.out.println("D: Check most recent transaction");
+            System.out.println("E: Exit");
+
+            char option;
+
+            do {
+                System.out.println("Select an option: ");
+                option = toUpperCase(scanner.next().charAt(0));
+                enterOption(option);
+            } while (option != 'E');
+
+        } catch (IllegalStateException e) {
+            System.out.println("Invalid menu option!");
             showMenuIntroAndOptions(account);
-        } catch (InvalidAmountException e) {
-            System.out.println("Invalid input! Please try again.");
         }
     }
 
-    private static void showMenuIntroAndOptions(BankAccount account) throws InvalidAmountException {
-        System.out.println("Welcome " + account.getCustomerName());
-        System.out.println("ID: " + account.getCustomerId());
-        System.out.println("You have the following options: ");
-        System.out.println("A: Get balance");
-        System.out.println("B: Deposit");
-        System.out.println("C: Withdraw");
-        System.out.println("D: Check most recent transaction");
-        System.out.println("E: Exit");
-
-        enterOption();
-    }
-
-    private static void enterOption() throws InvalidAmountException {
-        char option;
-
-        do {
-            System.out.println("Select an option: ");
-            option = scanner.next().charAt(0);
-
-            switch (option) {
-                case 'A' -> System.out.println(account.getBalance());
-                case 'B' -> selectedDeposit();
-                case 'C' -> selectedWithdrawal();
-                case 'D' -> System.out.println(account.getPreviousTransaction());
-                case 'E' -> System.out.println("Goodbye!");
-                default -> throw new IllegalStateException("Unexpected value: " + option);
-            }
-        } while (option != 'E');
+    private static void enterOption(char option) throws IllegalStateException {
+        try {
+                switch (option) {
+                    case 'A' -> System.out.println(account.getBalance());
+                    case 'B' -> selectedDeposit();
+                    case 'C' -> selectedWithdrawal();
+                    case 'D' -> System.out.println(account.getPreviousTransaction());
+                    case 'E' -> System.out.println("Goodbye!");
+                    default -> throw new IllegalStateException("Unexpected value: " + option);
+                }
+        } catch (InvalidAmountException e) {
+            System.out.println("Invalid amount! Please try again.");
+            enterOption(option);
+        }
     }
 
     private static void selectedDeposit() throws InvalidAmountException {

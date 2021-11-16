@@ -38,7 +38,7 @@ class BankAccountTest {
     }
 
     @Test
-    void shouldGetInvalid_givenInvalidDepositAmount() throws InvalidAmountException {
+    void shouldGetInvalidAmount_givenInvalidDepositAmount() throws InvalidAmountException {
 
         assertThrows(InvalidAmountException.class, ()-> account.deposit(0));
     }
@@ -55,7 +55,7 @@ class BankAccountTest {
     }
 
     @Test
-    void shouldGetInvalid_givenWithdrawMoreThanBalanceAmount() throws InvalidAmountException {
+    void shouldGetInvalidAmount_givenWithdrawMoreThanBalanceAmount() throws InvalidAmountException {
 
         // when
         account.deposit(20);
