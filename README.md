@@ -1,4 +1,4 @@
-# simple-java-banking-app
+# console-bank-java
 Simple Java banking console application developed through Test-Driven Development (TDD). Started as an exploration into TDD, with the aim of practicing and experience development through TDD.
 
 ## Prerequisites
